@@ -1,470 +1,159 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>SEPTIAN RIZKY IZZA · NETWORK ENGINEER</title>
-    <!-- CSS terpisah -->
-    <link rel="stylesheet" href="style.css">
-    <!-- Google Fonts - Inter & Fira Code -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Fira+Code:wght@400;500;600&display=swap" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Septian Rizky · personal data · unix theme</title>
+  <!-- CSS external -->
+  <link rel="stylesheet" href="style.css">
+  <!-- Font -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600&display=swap">
 </head>
 <body>
-    <!-- Network Background Container -->
-    <div id="network-bg">
-        <canvas id="topology-canvas"></canvas>
-        <div class="grid-overlay"></div>
-        <div class="scan-lines"></div>
+  <div class="unix-session">
+    <!-- title bar : like tmux / xterm -->
+    <div class="titlebar">
+      <div class="titlebar-left">
+        <div class="window-buttons">
+          <span class="window-btn close"></span>
+          <span class="window-btn minimize"></span>
+          <span class="window-btn maximize"></span>
+        </div>
+        <span class="titlebar-path">
+          <span class="prompt">⧩</span> <span class="folder">~/personal_data/septian/</span>
+        </span>
+      </div>
+      <div class="titlebar-right">
+        <span>🐧 unix:23</span>
+        <span class="uptime">⏃ uptime 17y 42d</span>
+        <span>⎈ 0x7E:RI</span>
+      </div>
     </div>
-    
-    <!-- Bitcoin Elements -->
-    <div class="bitcoin-elements">
-        <div class="btc-coin btc-1">
-            <span class="btc-symbol">₿</span>
-            <span class="btc-glow"></span>
+
+    <!-- main content with left ascii + right skills -->
+    <div class="content-grid">
+      <!-- left column - classic fetch -->
+      <div class="ascii-col">
+        <!-- ascii art with unix vibe (customized) -->
+        <div class="unix-logo">
+          <pre>      .-.-.   .-.-.   .-.-.  
+     / / \ \ / / \ \ / / \ \ 
+    { `   } { `   } { `   } 
+     \   /   \   /   \   /  
+      '-'     '-'     '-'   </pre>
+          <pre>    ╻ ╻┏━┓┏┳┓┏┓╻┏┓┏┓   ╻┏ 
+    ┃┃┃┣┳┛┃┃┃┃┗┫┣┻┓   ┣┻┓
+    ┗┻┛╹┗╸╹ ╹╹ ╹╹  ╹   ╹ ╹</pre>
         </div>
-        <div class="btc-coin btc-2">
-            <span class="btc-symbol">₿</span>
-            <span class="btc-glow"></span>
+
+        <!-- personal info in neat 'neofetch' style -->
+        <div class="user-host">
+          <div class="line-detail">
+            <span class="label">user</span>
+            <span class="value">septian@unix</span>
+          </div>
+          <div class="line-detail">
+            <span class="label">name</span>
+            <span class="value highlight">Septian Rizky Izza Ramadhan</span>
+          </div>
+          <div class="line-detail">
+            <span class="label">age</span>
+            <span class="value age">17 years (≈ 6205 days)</span>
+          </div>
+          <div class="line-detail">
+            <span class="label">shell</span>
+            <span class="value">/bin/zsh · python3</span>
+          </div>
+          <div class="line-detail">
+            <span class="label">origin</span>
+            <span class="value">ID 🇮🇩</span>
+          </div>
         </div>
-        <div class="btc-coin btc-3">
-            <span class="btc-symbol">₿</span>
-            <span class="btc-glow"></span>
+
+        <!-- small stat signature (like /etc/passwd) -->
+        <div class="signature">
+          <span>>_ uid=1000(septian) gid=1000(dev) groups=1000(networking),27(sudo),100(linux)</span>
         </div>
-        <div class="btc-mini btc-mini-1"></div>
-        <div class="btc-mini btc-mini-2"></div>
-        <div class="btc-mini btc-mini-3"></div>
-        <div class="btc-mini btc-mini-4"></div>
-        <div class="btc-mini btc-mini-5"></div>
+      </div>
+
+      <!-- right column – skills with retro progress bars -->
+      <div class="skills-col">
+        <div class="section-title">
+          <span class="arrow">⟫⟫</span>  keahlian matrix / skill-set
+        </div>
+
+        <!-- python skill -->
+        <div class="skill-item">
+          <div class="skill-header">
+            <span class="skill-name">🐍 python3</span>
+            <span class="skill-percent">50%</span>
+          </div>
+          <div class="progress-bar-unix">
+            <div class="progress-fill python" style="width:50%;">50%</div>
+          </div>
+        </div>
+
+        <!-- linux skill -->
+        <div class="skill-item">
+          <div class="skill-header">
+            <span class="skill-name">🐧 linux (ubuntu, ubuntu server)</span>
+            <span class="skill-percent">30%</span>
+          </div>
+          <div class="progress-bar-unix">
+            <div class="progress-fill linux" style="width:30%;">30%</div>
+          </div>
+        </div>
+
+        <!-- networking skill -->
+        <div class="skill-item">
+          <div class="skill-header">
+            <span class="skill-name">🌐 networking (cisco, tcp/ip)</span>
+            <span class="skill-percent">20%</span>
+          </div>
+          <div class="progress-bar-unix">
+            <div class="progress-fill networking" style="width:20%;">20%</div>
+          </div>
+        </div>
+
+        <!-- additional unix-style stats with binary/age context -->
+        <div class="extra-stats">
+          <div class="stat-block">
+            <div class="stat-num">50%</div>
+            <div class="stat-label">python</div>
+          </div>
+          <div class="stat-block">
+            <div class="stat-num">30%</div>
+            <div class="stat-label">linux</div>
+          </div>
+          <div class="stat-block">
+            <div class="stat-num">20%</div>
+            <div class="stat-label">networking</div>
+          </div>
+          <div class="stat-block">
+            <div class="stat-num">17</div>
+            <div class="stat-label">winter/age</div>
+          </div>
+        </div>
+
+        <!-- a mini 'man' snippet about septian -->
+        <div class="man-snippet">
+          <span class="man-prompt">$</span> <span class="man-command">man septian</span> <br>
+          <span class="man-header">SEPTIAN(1)                 User Commands                SEPTIAN(1)</span><br><br>
+          <span class="man-content">  • python,  • Dev phyton, • routing & switching</span><br>
+          <span class="man-content">  • 17 y.o. unix enthusiast, loves minimal setup</span><br>
+        </div>
+      </div>
     </div>
-    
-    <!-- NAVBAR MODERN -->
-    <header class="navbar">
-        <div class="container nav-container">
-            <div class="logo">
-                <span class="logo-bracket">[</span>
-                <span class="logo-text">Rephy</span>
-                <span class="logo-bracket">]</span>
-                <span class="logo-cursor">_</span>
-            </div>
-            <div class="nav-links">
-                <a href="#home" class="nav-link active">Home</a>
-                <a href="#tentang" class="nav-link">Tentang</a>
-                <a href="#keahlian" class="nav-link">Keahlian</a>
-                <a href="#kontak" class="nav-link">Kontak</a>
-                <a href="#sertifikat" class="nav-link">Sertifikat</a>
-            </div>
-            <div class="nav-status">
-                <span class="status-dot"></span>
-                <span class="status-text">online</span>
-            </div>
-        </div>
-    </header>
 
-    <main>
-        <!-- HOME SECTION -->
-        <section id="home" class="hero section">
-            <div class="cyber-grid"></div>
-            <div class="container">
-                <div class="hero-content">
-                    <div class="hero-badge">
-                        <span class="badge-line">━━</span>
-                        <span class="badge-text">NETWORK ENGINEER · SYSTEM ADMIN</span>
-                        <span class="badge-line">━━</span>
-                    </div>
-                    
-                    <h1 class="hero-title">
-                        <span class="title-line">Septian Rizky</span>
-                        <span class="title-line cyan">Izza Ramadhan</span>
-                    </h1>
-                    
-                    <div class="network-stats">
-                        <div class="network-node">
-                            <span class="node-pulse"></span>
-                            <span class="node-label">17</span>
-                            <span class="node-desc">usia</span>
-                        </div>
-                        <div class="network-connection">
-                            <span class="conn-line"></span>
-                            <span class="conn-icon">⏣</span>
-                            <span class="conn-line"></span>
-                        </div>
-                        <div class="network-node">
-                            <span class="node-pulse"></span>
-                            <span class="node-label">2+</span>
-                            <span class="node-desc">tahun</span>
-                        </div>
-                        <div class="network-connection">
-                            <span class="conn-line"></span>
-                            <span class="conn-icon">⏣</span>
-                            <span class="conn-line"></span>
-                        </div>
-                        <div class="network-node">
-                            <span class="node-pulse"></span>
-                            <span class="node-label">∞</span>
-                            <span class="node-desc">semangat</span>
-                        </div>
-                    </div>
-                    
-                    <div class="terminal-window">
-                        <div class="terminal-header">
-                            <span class="terminal-dot red"></span>
-                            <span class="terminal-dot yellow"></span>
-                            <span class="terminal-dot green"></span>
-                            <span class="terminal-path">rephy@network:~$</span>
-                        </div>
-                        <div class="terminal-body">
-                            <span class="terminal-prompt">></span>
-                            <span class="terminal-command">echo "belajar adalah investasi masa depan"</span>
-                            <span class="terminal-cursor">█</span>
-                        </div>
-                    </div>
-                    
-                    <div class="hero-cta">
-                        <a href="#tentang" class="btn btn-primary">
-                            <span class="btn-text">jelajahi</span>
-                            <span class="btn-icon">→</span>
-                        </a>
-                        <a href="#kontak" class="btn btn-outline">
-                            <span class="btn-text">contact</span>
-                            <span class="btn-icon">↘</span>
-                        </a>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="scroll-indicator">
-                <div class="mouse"></div>
-                <span class="scroll-text">scroll</span>
-            </div>
-        </section>
+    <!-- footer with blinking cursor like a real terminal -->
+    <div class="footer-prompt">
+      <span class="prompt-sign">septian@phy:~$</span>
+      <span class="command">rm -rf</span>
+      <span class="cursor"></span>
+    </div>
+  </div>
 
-        <!-- TENTANG SECTION -->
-        <section id="tentang" class="about section">
-            <div class="container">
-                <div class="section-header">
-                    <h2>
-                        <span class="header-marker">#</span>
-                        network.identity
-                    </h2>
-                    <div class="header-line"></div>
-                </div>
-
-                <div class="about-grid">
-                    <div class="about-card" data-card="1">
-                        <div class="card-glitch"></div>
-                        <div class="card-icon">
-                            <span class="icon-pulse"></span>
-                            <span class="icon-text">⦿</span>
-                        </div>
-                        <h3>identitas</h3>
-                        <ul class="card-list">
-                            <li><span class="list-dot">▶</span> Septian Rizky Izza R</li>
-                            <li><span class="list-dot">▶</span> 17 tahun</li>
-                            <li><span class="list-dot">▶</span> Indonesia</li>
-                            <li><span class="list-dot">▶</span> Network Engineer</li>
-                        </ul>
-                        <div class="card-metrics">
-                            <div class="metric">
-                                <span class="metric-value">192.168.1.17</span>
-                                <span class="metric-label">IP Address</span>
-                            </div>
-                        </div>
-                    </div>
-                    
-                    <div class="about-card" data-card="2">
-                        <div class="card-glitch"></div>
-                        <div class="card-icon">
-                            <span class="icon-pulse"></span>
-                            <span class="icon-text">⦿</span>
-                        </div>
-                        <h3>hobi & minat</h3>
-                        <div class="hobi-content">
-                            <div class="quote-sign">"</div>
-                            <p>Network infrastructure, system administration, dan cybersecurity. Setiap baris kode adalah koneksi.</p>
-                        </div>
-                        <div class="hobi-tags">
-                            <span class="tag">#networking</span>
-                            <span class="tag">#linux</span>
-                            <span class="tag">#security</span>
-                            <span class="tag">#cloud</span>
-                        </div>
-                    </div>
-                    
-                    <div class="about-card" data-card="3">
-                        <div class="card-glitch"></div>
-                        <div class="card-icon">
-                            <span class="icon-pulse"></span>
-                            <span class="icon-text">⦿</span>
-                        </div>
-                        <h3>fokus</h3>
-                        <p class="fokus-text">Memperdalam <span class="cyan">Network Engineering</span> & <span class="cyan">System Administration</span></p>
-                        <div class="progress-container">
-                            <div class="progress-label">
-                                <span>Learning Progress</span>
-                                <span class="progress-percent">70%</span>
-                            </div>
-                            <div class="progress-bar">
-                                <div class="progress-fill" style="width: 70%"></div>
-                            </div>
-                        </div>
-                        
-                        <!-- Bitcoin Mini Stats -->
-                        <div class="bitcoin-mini-stats">
-                            <div class="mini-stat">
-                                <span class="mini-icon">₿</span>
-                                <span class="mini-text">HODL</span>
-                            </div>
-                            <div class="mini-stat">
-                                <span class="mini-icon">⚡</span>
-                                <span class="mini-text">MINE</span>
-                            </div>
-                            <div class="mini-stat">
-                                <span class="mini-icon">🔗</span>
-                                <span class="mini-text">NODE</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- KEAHLIAN SECTION -->
-        <section id="keahlian" class="skills section">
-            <div class="container">
-                <div class="section-header">
-                    <h2>
-                        <span class="header-marker">#</span>
-                        tech.stack
-                    </h2>
-                    <div class="header-line"></div>
-                </div>
-
-                <div class="skills-container">
-                    <!-- Linux Server -->
-                    <div class="skill-card">
-                        <div class="skill-header">
-                            <div class="skill-icon-wrapper">
-                                <span class="skill-icon">⎈</span>
-                                <span class="skill-glow"></span>
-                            </div>
-                            <div class="skill-info">
-                                <span class="skill-name">Linux Server</span>
-                                <span class="skill-category">Ubuntu · CentOS · Debian</span>
-                            </div>
-                            <span class="skill-level">55%</span>
-                        </div>
-                        <div class="skill-progress">
-                            <div class="progress-track">
-                                <div class="progress-thumb" style="width: 55%"></div>
-                            </div>
-                        </div>
-                        <div class="skill-details">
-                            <span class="detail-item">▹ Apache/Nginx</span>
-                            <span class="detail-item">▹ DNS/Bind9</span>
-                            <span class="detail-item">▹ Firewall/iptables</span>
-                        </div>
-                    </div>
-
-                    <!-- Networking -->
-                    <div class="skill-card">
-                        <div class="skill-header">
-                            <div class="skill-icon-wrapper">
-                                <span class="skill-icon">🌐</span>
-                                <span class="skill-glow"></span>
-                            </div>
-                            <div class="skill-info">
-                                <span class="skill-name">Networking</span>
-                                <span class="skill-category">CCNA · TCP/IP · Routing</span>
-                            </div>
-                            <span class="skill-level">45%</span>
-                        </div>
-                        <div class="skill-progress">
-                            <div class="progress-track">
-                                <div class="progress-thumb" style="width: 45%"></div>
-                            </div>
-                        </div>
-                        <div class="skill-details">
-                            <span class="detail-item">▹ Subnetting/VLSM</span>
-                            <span class="detail-item">▹ VLAN/Trunking</span>
-                            <span class="detail-item">▹ OSPF/EIGRP</span>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Bitcoin Ticker -->
-                <div class="bitcoin-ticker">
-                    <div class="ticker-content">
-                        <span class="ticker-item">₿ BTC / USD = 64,321</span>
-                        <span class="ticker-item">⚡ Network Hashrate: 524 EH/s</span>
-                        <span class="ticker-item">🔗 Block Height: 845,321</span>
-                        <span class="ticker-item">⛏️ Mining Difficulty: 86.7T</span>
-                        <span class="ticker-item">₿ Bitcoin Dominance: 52.3%</span>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- KONTAK SECTION -->
-        <section id="kontak" class="contact section">
-            <div class="container">
-                <div class="section-header">
-                    <h2>
-                        <span class="header-marker">#</span>
-                        contact.network
-                    </h2>
-                    <div class="header-line"></div>
-                </div>
-
-                <div class="contact-wrapper">
-                    <!-- Network Visualization -->
-                    <div class="network-visualization">
-                        <div class="network-hub">
-                            <div class="hub-core"></div>
-                            <div class="hub-ring"></div>
-                            <div class="hub-ring ring2"></div>
-                            <span class="hub-label">REPHY</span>
-                        </div>
-                        <div class="connection-lines">
-                            <div class="line line1"></div>
-                            <div class="line line2"></div>
-                        </div>
-                    </div>
-
-                    <!-- Contact Cards -->
-                    <div class="contact-grid">
-                        <!-- Email Card -->
-                        <div class="contact-card" data-type="email">
-                            <div class="card-bg"></div>
-                            <div class="card-content">
-                                <div class="card-header">
-                                    <span class="card-icon">✉</span>
-                                    <span class="card-protocol">SMTP/IMAP</span>
-                                </div>
-                                <h3 class="card-title">Email Connection</h3>
-                                <div class="card-address">revyengineering@gmail.com</div>
-                                <div class="card-status">
-                                    <span class="status-indicator"></span>
-                                    <span class="status-text">Active</span>
-                                </div>
-                                <button class="contact-btn" onclick="window.location.href='mailto:revyengineering@gmail.com?subject=Contact%20from%20Portfolio&body=Halo%20Septian,%20saya%20tertarik%20dengan%20profilmu...'">
-                                    <span>Send Message</span>
-                                    <span class="btn-glow"></span>
-                                </button>
-                                <div class="card-pulse"></div>
-                            </div>
-                        </div>
-
-                        <!-- Instagram Card -->
-                        <div class="contact-card" data-type="instagram">
-                            <div class="card-bg"></div>
-                            <div class="card-content">
-                                <div class="card-header">
-                                    <span class="card-icon">📷</span>
-                                    <span class="card-protocol">SOCIAL</span>
-                                </div>
-                                <h3 class="card-title">Instagram</h3>
-                                <div class="card-address">@rizkyxyz67</div>
-                                <div class="card-status">
-                                    <span class="status-indicator"></span>
-                                    <span class="status-text">Online</span>
-                                </div>
-                                <button class="contact-btn" onclick="window.open('https://www.instagram.com/rizkyxyz67?igsh=MXR4Ymx3YjdlbmRlYw==', '_blank')">
-                                    <span>Follow</span>
-                                    <span class="btn-glow"></span>
-                                </button>
-                                <div class="card-pulse"></div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- CERTIFICATIONS SECTION -->
-        <section id="sertifikat" class="certs section">
-            <div class="container">
-                <div class="section-header">
-                    <h2>
-                        <span class="header-marker">#</span>
-                        certifications
-                    </h2>
-                    <div class="header-line"></div>
-                </div>
-
-                <div class="certs-grid">
-                    <div class="cert-item">
-                        <div class="cert-icon">🏆</div>
-                        <div class="cert-info">
-                            <h4>Networking Fundamentals</h4>
-                            <p>In Progress · 2024</p>
-                        </div>
-                    </div>
-                    <div class="cert-item">
-                        <div class="cert-icon">🏆</div>
-                        <div class="cert-info">
-                            <h4>Linux Administrator</h4>
-                            <p>Self Study · 2024</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- QUOTE SECTION -->
-        <section class="quote-section">
-            <div class="container">
-                <div class="terminal-card">
-                    <div class="terminal-header">
-                        <span class="terminal-dot red"></span>
-                        <span class="terminal-dot yellow"></span>
-                        <span class="terminal-dot green"></span>
-                        <span class="terminal-title">rephy@network:~$</span>
-                    </div>
-                    <div class="terminal-body">
-                        <p class="terminal-quote">
-                            <span class="quote-mark">"</span>
-                            Every connection is a learning opportunity
-                            <span class="quote-mark">"</span>
-                        </p>
-                        <p class="terminal-author">
-                            <span class="author-arrow">↳</span> septian rizky izza · 17
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <!-- FOOTER -->
-    <footer class="footer">
-        <div class="container">
-            <div class="footer-content">
-                <div class="footer-left">
-                    <span class="footer-copy">© 2025</span>
-                    <span class="footer-name">Septian Rizky Izza Ramadhan</span>
-                </div>
-                <div class="footer-right">
-                    <div class="footer-terminal">
-                        <span class="term-prompt">$</span>
-                        <span class="term-command">whoami</span>
-                        <span class="term-output">network_engineer</span>
-                    </div>
-                </div>
-            </div>
-            
-            <!-- Bitcoin Address -->
-            <div class="bitcoin-address">
-                <span class="btc-label">₿ BTC Donation:</span>
-                <span class="btc-hash">-</span>
-                <button class="btc-copy-btn" onclick="copyBTCAddress()" title="Copy Bitcoin Address">📋</button>
-            </div>
-        </div>
-    </footer>
-
-    <!-- JS terpisah -->
-    <script src="script.js"></script>
+  <!-- JavaScript external -->
+  <script src="script.js"></script>
 </body>
 </html>
